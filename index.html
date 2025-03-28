@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma'lumotlar</title>
+    
+    <style>
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: separate;
+}
+th, td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+}
+thead {
+    border: 20px solid black;
+    font-size: 20px;
+    border-collapse: collapse;
+    
+}
+
+.chap {
+    text-align: left;
+    
+}
+
+.rang {
+        text-align: center;
+        padding: 10px; 
+        font-size: 20px; 
+     
+    
+}
+
+.rang:hover{
+    background-color: red; 
+    color: aqua ;
+    border-color: orange; 
+}
+
+
+
+    </style>
+</head>
+<body>
+    
+    <table border="3px" style="width: 60%; margin: 20px auto; text-align: left;;">
+        <div class="rang">
+            <p>Birinchi bo'lib Sign up ga kiring</p>
+            <a href="/sign_up/" style="background-color: blue; color: white; padding: 10px; border-radius: 5px;">Sign up</a>
+            <a href="/sign_in/" style="background-color: blue; color: white; padding: 10px; border-radius: 5px;">Sign in</a>
+    </div>
+           <thead>
+            <tr>
+                <th colspan="5" style="text-align: center; font-size: 20px;">Talabalar ma'lumoti</th>
+            </tr>
+            <div class="chap">
+            <tr>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Repaet Password</th>
+            <th>Email Address</th>
+            </tr>
+        </thead>
+
+
+        </tr>
+
+        
+        {% for student in odam %}
+
+        <tbody>
+
+        <tr>
+            <th>{{ student[0] }}</th>
+            <th>{{ student[1] }}</th>
+            <th>{{ student[2] }}</th>
+            <th>{{ student[3] }}</th>
+            <th>{{ student[4] }}</th>
+            
+        </tbody>
+        </tr>
+    </div>
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>
